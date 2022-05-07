@@ -16,6 +16,8 @@ export class CoursesComponent implements OnInit {
   constructor(private coursesService: CoursesService) {
 
     this.courses = this.coursesService.list();
+    console.log(this.courses);
+    
 
     //this.coursesService.list().subscribe(courses => this.courses = courses);
   }
