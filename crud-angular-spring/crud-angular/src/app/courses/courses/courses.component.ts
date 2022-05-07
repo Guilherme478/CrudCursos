@@ -12,17 +12,13 @@ export class CoursesComponent implements OnInit {
 
   courses: Observable<Course[]>;
   displayedColumns = ['name', 'category'];
-
+  
   constructor(private coursesService: CoursesService) {
-
-    this.courses = this.coursesService.list();
-    console.log(this.courses);
     
-
+    this.courses = this.coursesService.list();
     //this.coursesService.list().subscribe(courses => this.courses = courses);
   }
 
   ngOnInit(): void {
   }
-
 }
